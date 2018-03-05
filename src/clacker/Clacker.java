@@ -26,18 +26,8 @@ public class Clacker {
         int dice2;
         int counter = 1;
         int sum = 0;
-        boolean num1 = true;
-        boolean num2 = true;
-        boolean num3 = true;
-        boolean num4 = true;
-        boolean num5 = true;
-        boolean num6 = true;
-        boolean num7 = true;
-        boolean num8 = true;
-        boolean num9 = true;
-        boolean num10 = true;
-        boolean num11 = true;
-        boolean num12 = true;
+        boolean[] nums={true,true,true,true,true,true,true,true,true,true,true,true};
+        
         boolean notUserSum = false;
 
         Scanner userIntro = new Scanner(System.in);
@@ -49,7 +39,9 @@ public class Clacker {
 
         if (decide.equalsIgnoreCase("no")) {
             while (again.equalsIgnoreCase("yes")) {
-                num1 = num2 = num3 = num4 = num5 = num6 = num7 = num8 = num9 = num10 = num11 = num12 = true;
+                for (int i=0;i<12;i++ ) {
+                    nums[i] = true;
+                }
                 counter = 0;
                 while (num1 || num2 || num3 || num4 || num5 || num6 || num7 || num8 || num9 || num10 || num11 || num12) {
                     System.out.println("Rolling dice for Roll " + counter + "...");
